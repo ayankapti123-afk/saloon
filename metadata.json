@@ -1,0 +1,6 @@
+{
+  "name": "Hair Castle – Professional Family Salon",
+  "description": "Modern, premium family salon in Sector 5 Salt Lake, Kolkata offering haircuts, balayage hair color, luxury spa rituals, and grooming services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

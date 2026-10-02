@@ -1,5 +1,5 @@
 import React from 'react';
-import { SALON_DATA } from '../data/salonData';
+import { SALON_DATA, stylingCraftImg } from '../data/salonData';
 import { CheckCircle2, ShieldCheck, Wifi, Sparkles, Coffee } from 'lucide-react';
 
 export const About: React.FC = () => {
@@ -11,7 +11,7 @@ export const About: React.FC = () => {
           <div className="lg:col-span-6 relative">
             <div className="relative z-10 overflow-hidden rounded-sm border border-[#232834] bg-[#12151D] shadow-2xl">
               <img
-                src="/src/assets/images/hair_castle_styling_craft_1790946527337.jpg"
+                src={stylingCraftImg}
                 alt="Hair stylist at Hair Castle performing precision styling and blow-dry in Kolkata"
                 className="w-full h-[380px] sm:h-[480px] object-cover object-center filter brightness-95 hover:scale-[1.02] transition-transform duration-700"
                 loading="lazy"

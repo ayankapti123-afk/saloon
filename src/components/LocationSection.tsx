@@ -99,11 +99,32 @@ export const LocationSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Interactive Map Column */}
+          {/* Interactive Map & Transit Column */}
           <div className="lg:col-span-7">
             <div className="overflow-hidden rounded-sm border border-[#232834] bg-[#12151D] shadow-2xl relative">
-              {/* Responsive Iframe */}
-              <div className="relative w-full h-[400px] sm:h-[480px] lg:h-[540px]">
+              {/* Map Header with View Controls */}
+              <div className="p-3.5 bg-[#0D0F14] border-b border-[#232834] flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse" />
+                  <span className="text-xs font-semibold text-white tracking-wide uppercase">
+                    Interactive Location Explorer
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-xs">
+                  <a
+                    href={SALON_DATA.location.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#D4AF37] hover:underline inline-flex items-center gap-1 font-medium"
+                  >
+                    <span>Full Screen</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Responsive Iframe with Fallback Container */}
+              <div className="relative w-full h-[380px] sm:h-[460px] lg:h-[500px] bg-[#151922]">
                 <iframe
                   title="Hair Castle Salon Location on Google Maps"
                   src={`https://maps.google.com/maps?q=${encodeURIComponent(
@@ -116,7 +137,7 @@ export const LocationSection: React.FC = () => {
                 />
 
                 {/* Floating Map Info Capsule */}
-                <div className="absolute top-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-[#0D0F14]/90 backdrop-blur-md border border-[#232834] p-3 rounded-sm shadow-xl pointer-events-none">
+                <div className="absolute top-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-[#0D0F14]/95 backdrop-blur-md border border-[#232834] p-3 rounded-sm shadow-xl">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0" />
                     <div>
@@ -125,11 +146,29 @@ export const LocationSection: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Floating Bottom Quick Action */}
+                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-[#0D0F14]/90 backdrop-blur-md border border-[#232834] p-2.5 rounded-sm">
+                  <div className="text-[11px] text-[#9E9B95] truncate pr-2">
+                    Near Nayapatti Shani Mandir
+                  </div>
+                  <a
+                    href={directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#0D0F14] bg-[#D4AF37] hover:bg-[#E6CA85] rounded-sm transition-all"
+                  >
+                    Navigate
+                  </a>
+                </div>
               </div>
 
               {/* Map Footer Note */}
               <div className="p-4 bg-[#12151D] border-t border-[#232834] flex flex-wrap items-center justify-between gap-3 text-xs text-[#8C8880]">
-                <span>Near Nayapatti Shani Mandir</span>
+                <div className="flex items-center gap-2">
+                  <Bus className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>5 mins from Sector V Metro & Karunamoyee Bus Terminus</span>
+                </div>
                 <a
                   href={SALON_DATA.location.googleMapsUrl}
                   target="_blank"

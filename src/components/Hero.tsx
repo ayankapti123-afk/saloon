@@ -1,5 +1,5 @@
 import React from 'react';
-import { SALON_DATA } from '../data/salonData';
+import { SALON_DATA, heroImg } from '../data/salonData';
 import { Calendar, Sparkles, Phone, MessageCircle, Navigation, ArrowDown } from 'lucide-react';
 
 interface HeroProps {
@@ -9,11 +9,11 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onBookClick, onServicesClick }) => {
   return (
-    <section className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <section className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-[#0D0F14]">
       {/* Background Image with Measured Contrast Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hair_castle_hero_salon_1790946512263.jpg"
+          src={heroImg}
           alt="Hair Castle luxury salon interior in Salt Lake Kolkata"
           className="w-full h-full object-cover object-center scale-[1.02] filter brightness-90 transition-transform duration-1000"
           referrerPolicy="no-referrer"
@@ -21,7 +21,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookClick, onServicesClick }) => {
         />
         {/* Scrim: Dark gradient providing WCAG AA contrast (≥ 4.5:1) */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F14] via-[#0D0F14]/75 to-[#0D0F14]/40" />
-        <div className="absolute inset-0 bg-radial-at-c from-transparent via-[#0D0F14]/40 to-[#0D0F14]" />
+        <div className="absolute inset-0 bg-[#0D0F14]/30 backdrop-brightness-95" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">

@@ -4,6 +4,14 @@
  * so they can be easily edited or verified without touching UI code.
  */
 
+import heroImg from '../assets/images/hair_castle_hero_salon_1790946512263.jpg';
+import stylingCraftImg from '../assets/images/hair_castle_styling_craft_1790946527337.jpg';
+import balayageColorImg from '../assets/images/hair_castle_balayage_color_1790946540634.jpg';
+import hairSpaImg from '../assets/images/hair_castle_hair_spa_treatment_1790946553936.jpg';
+import mensGroomingImg from '../assets/images/hair_castle_mens_grooming_1790946566249.jpg';
+
+export { heroImg, stylingCraftImg, balayageColorImg, hairSpaImg, mensGroomingImg };
+
 export interface ServiceItem {
   id: string;
   name: string;
@@ -272,7 +280,7 @@ export const SALON_DATA = {
       title: 'Modern Salon Ambience',
       category: 'spa',
       categoryName: 'Salon & Spa',
-      imageSrc: '/src/assets/images/hair_castle_hero_salon_1790946512263.jpg',
+      imageSrc: heroImg,
       aspectRatio: '16/9',
       alt: 'Hair Castle modern salon interior in Salt Lake Kolkata with elegant lighting and styling stations',
       caption: 'Our spacious, air-conditioned styling arena designed for pure customer comfort.',
@@ -282,7 +290,7 @@ export const SALON_DATA = {
       title: 'Precision Styling & Blowout',
       category: 'haircut',
       categoryName: 'Haircuts & Styling',
-      imageSrc: '/src/assets/images/hair_castle_styling_craft_1790946527337.jpg',
+      imageSrc: stylingCraftImg,
       aspectRatio: '4/3',
       alt: 'Hair stylist working on precision haircut and blow-dry styling',
       caption: 'Detailed craftsmanship tailored to each customer’s hair texture and lifestyle.',
@@ -292,7 +300,7 @@ export const SALON_DATA = {
       title: 'Caramel Balayage Transformation',
       category: 'colour',
       categoryName: 'Hair Colour',
-      imageSrc: '/src/assets/images/hair_castle_balayage_color_1790946540634.jpg',
+      imageSrc: balayageColorImg,
       aspectRatio: '3/4',
       alt: 'Dimensional caramel balayage hair color with glossy soft waves',
       caption: 'Seamless dimensional highlights with zero harsh demarcation lines.',
@@ -302,7 +310,7 @@ export const SALON_DATA = {
       title: 'Revitalizing Hair Spa Ritual',
       category: 'spa',
       categoryName: 'Salon & Spa',
-      imageSrc: '/src/assets/images/hair_castle_hair_spa_treatment_1790946553936.jpg',
+      imageSrc: hairSpaImg,
       aspectRatio: '4/3',
       alt: 'Customer relaxing during a nourishing hair spa and scalp massage treatment',
       caption: 'Therapeutic head wash and steam spa ritual restoring hair moisture and vitality.',
@@ -312,7 +320,7 @@ export const SALON_DATA = {
       title: 'Sharp Fade & Beard Sculpting',
       category: 'grooming',
       categoryName: 'Men’s Grooming',
-      imageSrc: '/src/assets/images/hair_castle_mens_grooming_1790946566249.jpg',
+      imageSrc: mensGroomingImg,
       aspectRatio: '4/3',
       alt: 'Sharp men fade haircut and clean beard trim finish',
       caption: 'Crisp scissor-over-comb and clipper graduation for modern gentlemen.',

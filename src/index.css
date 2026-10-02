@@ -1,21 +1,20 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  }
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+}
 
-  body {
-    font-family: var(--font-sans);
-    background-color: #0d0f14;
-    color: #e6e4df;
-    overflow-x: hidden;
-  }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: #0d0f14;
+  color: #e6e4df;
+  overflow-x: hidden;
+}
 
-  h1, h2, h3, .font-display {
-    font-family: var(--font-serif);
-  }
+h1, h2, h3, .font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
 /* Custom scrollbar for luxury feel */
@@ -42,3 +41,4 @@
   outline: 2px solid #d4af37;
   outline-offset: 2px;
 }
+
